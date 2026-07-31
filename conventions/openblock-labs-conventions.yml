@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://auth.openblocklabs.com/.well-known/openid-configuration +
+  OB-1 product/enterprise pages
+provider: OpenBlock Labs (OB-1)
+summary: >-
+  Cross-cutting semantics observed for the OB-1 platform. Only the OAuth 2.0 /
+  OIDC layer is publicly documented; the platform data API sits behind
+  authenticated dashboard access, so request/response envelope, pagination, and
+  idempotency conventions are not publicly published.
+auth:
+  style: oauth2-bearer
+  authorization_server: https://auth.openblocklabs.com
+  flows: [authorization_code+pkce, client_credentials, device_code, refresh_token]
+  token_type: Bearer (RS256 JWT)
+  see: authentication/openblock-labs-authentication.yml
+  scopes: scopes/openblock-labs-scopes.yml
+idempotency:
+  documented: false
+  note: No public idempotency-key convention documented.
+pagination:
+  documented: false
+versioning:
+  documented: false
+  note: No public versioning or deprecation policy (RFC 8594) found; API is auth-gated.
+error_envelope:
+  documented: false
+  note: No public problem+json / error-catalog reference; see conformance rfc9457=false.
+rate_limiting:
+  documented: false
+  note: Usage is metered by model-token cost (pass-through 1:1 pricing), not a published rate-limit header contract.

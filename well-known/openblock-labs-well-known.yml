@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of OpenBlock Labs (OB-1) auth + dashboard hosts
+notes: >-
+  Only the auth.openblocklabs.com host (WorkOS AuthKit-backed) serves real
+  machine-readable well-known documents. The dashboard.openblocklabs.com host is
+  a Next.js SPA that returns text/html 200 for every /.well-known/* path (not
+  real documents). The marketing hosts (www/root) return 404 for security.txt.
+well_known:
+- path: /.well-known/openid-configuration
+  host: https://auth.openblocklabs.com
+  status: 200
+  content_type: application/json
+  file: openblock-labs-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  host: https://auth.openblocklabs.com
+  status: 200
+  content_type: application/json
+  file: openblock-labs-oauth-authorization-server.json
+probed_absent:
+- path: /.well-known/security.txt
+  host: https://www.openblocklabs.com
+  status: 404
+- path: /.well-known/security.txt
+  host: https://dashboard.openblocklabs.com
+  status: 200
+  note: text/html SPA catch-all, not a real security.txt
+- path: /.well-known/api-catalog
+  host: https://dashboard.openblocklabs.com
+  status: 200
+  note: text/html SPA catch-all, not a real document
+- path: /.well-known/ai-plugin.json
+  host: https://dashboard.openblocklabs.com
+  status: 200
+  note: text/html SPA catch-all, not a real document

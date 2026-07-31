@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: searched
+source: https://auth.openblocklabs.com/.well-known/openid-configuration
+docs: https://auth.openblocklabs.com/.well-known/oauth-authorization-server
+provider: OpenBlock Labs (OB-1)
+summary: >-
+  OB-1 authenticates via a standards-compliant OAuth 2.0 / OpenID Connect
+  authorization server hosted at auth.openblocklabs.com (WorkOS AuthKit).
+  Interactive users sign in through AuthKit; programmatic/machine access is
+  available via the client_credentials and OAuth 2.0 Device Authorization
+  grants. Enterprise deployments additionally support SSO / SAML.
+security_schemes:
+- type: oauth2
+  name: OB-1 OAuth 2.0 / OIDC
+  issuer: https://auth.openblocklabs.com
+  flows:
+  - grant: authorization_code
+    pkce: true
+    pkce_methods: [S256]
+    authorization_endpoint: https://auth.openblocklabs.com/oauth2/authorize
+    token_endpoint: https://auth.openblocklabs.com/oauth2/token
+  - grant: client_credentials
+    token_endpoint: https://auth.openblocklabs.com/oauth2/token
+  - grant: refresh_token
+    token_endpoint: https://auth.openblocklabs.com/oauth2/token
+  - grant: urn:ietf:params:oauth:grant-type:device_code
+    device_authorization_endpoint: https://auth.openblocklabs.com/oauth2/device_authorization
+  token_endpoint_auth_methods:
+  - none
+  - client_secret_basic
+  - client_secret_post
+  dynamic_client_registration: https://auth.openblocklabs.com/oauth2/register
+  introspection_endpoint: https://auth.openblocklabs.com/oauth2/introspection
+  userinfo_endpoint: https://auth.openblocklabs.com/oauth2/userinfo
+  jwks_uri: https://auth.openblocklabs.com/oauth2/jwks
+  id_token_signing_alg: [RS256]
+  scopes: [openid, profile, email, offline_access]
+- type: openIdConnect
+  name: OB-1 OpenID Connect
+  openIdConnectUrl: https://auth.openblocklabs.com/.well-known/openid-configuration
+enterprise:
+  sso_saml: true
+  note: Enterprise plans support SSO / SAML with major identity providers.

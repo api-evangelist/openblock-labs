@@ -1,8 +1,31 @@
 aid: openblock-labs
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openblock-labs.png
 name: OpenBlock Labs
-description: 'OpenBlock Labs is a company surfaced as a portfolio company of electric-capital and added
-  to the API Evangelist network as a stub for enrichment. Sector: data. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  OpenBlock Labs builds OB-1, a self-improving autonomous coding agent that
+  automates the software development lifecycle from PM to PR. OB-1 runs as a
+  native terminal CLI and inside VS Code and JetBrains IDEs, consumes MCP
+  (Model Context Protocol) servers for custom tool integration, and provides a
+  built-in browser agent. It routes across 300+ models via OpenRouter with
+  bring-your-own-keys, bills usage-based at 1:1 model-token pass-through, and
+  integrates with GitHub, Linear, Graphite, and Slack. Access is authenticated
+  through a standards-compliant OAuth 2.0 / OpenID Connect authorization server
+  (auth.openblocklabs.com, WorkOS AuthKit), with SSO/SAML, self-hosting, and
+  audit logging available on enterprise plans. Originally surfaced as a
+  portfolio company of Electric Capital and enriched by the API Evangelist
+  pipeline from its public product surface and published auth metadata.
 url: https://raw.githubusercontent.com/api-evangelist/openblock-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +35,35 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Data
-apis: []
+- Coding Agent
+- AI Agents
+- Developer Tools
+- Automation
+- OAuth
+- MCP
+apis:
+- name: OB-1 Platform
+  description: >-
+    The OB-1 coding-agent platform. The only publicly reachable API surface is
+    the OAuth 2.0 / OpenID Connect authorization server; the platform data API
+    and manual sit behind authenticated dashboard access.
+  humanURL: https://dashboard.openblocklabs.com/manual
+  baseURL: https://auth.openblocklabs.com
+  tags:
+  - OAuth
+  - OpenID Connect
+  - Coding Agent
+  properties:
+  - type: Authentication
+    url: authentication/openblock-labs-authentication.yml
+  - type: WellKnown
+    url: well-known/openblock-labs-well-known.yml
+  - type: OAuthScopes
+    url: scopes/openblock-labs-scopes.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +72,40 @@ maintainers:
 common:
 - type: Website
   url: https://www.openblocklabs.com/
+- type: DeveloperPortal
+  url: https://dashboard.openblocklabs.com/
+- type: Documentation
+  url: https://dashboard.openblocklabs.com/manual
+- type: Pricing
+  url: https://openblocklabs.com/pricing
+- type: SignUp
+  url: https://auth.openblocklabs.com/
+- type: TermsOfService
+  url: https://dashboard.openblocklabs.com/terms
+- type: PrivacyPolicy
+  url: https://dashboard.openblocklabs.com/privacy
+- type: GitHubOrganization
+  url: https://github.com/openblocklabs
+- type: Support
+  url: https://join.slack.com/t/ob1-co/shared_invite/zt-3rjae490g-uiEO5z_FnWJ5GAc~hkfkyA
+- type: Authentication
+  url: authentication/openblock-labs-authentication.yml
+- type: OAuthScopes
+  url: scopes/openblock-labs-scopes.yml
+- type: WellKnown
+  url: well-known/openblock-labs-well-known.yml
+- type: Conformance
+  url: conformance/openblock-labs-conformance.yml
+- type: CLI
+  url: cli/openblock-labs-cli.yml
+- type: Conventions
+  url: conventions/openblock-labs-conventions.yml
+- type: LLMsTxt
+  url: llms/openblock-labs-llms.txt
+- type: DomainSecurity
+  url: security/openblock-labs-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

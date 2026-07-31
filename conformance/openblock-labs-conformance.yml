@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://auth.openblocklabs.com/.well-known/openid-configuration +
+  /.well-known/oauth-authorization-server
+provider: OpenBlock Labs (OB-1)
+conformance:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Published RFC 8414 OAuth 2.0 Authorization Server Metadata at
+    auth.openblocklabs.com/.well-known/oauth-authorization-server; supports
+    authorization_code, client_credentials, refresh_token and device_code grants.
+- id: oidc
+  conforms: true
+  evidence: >-
+    Published OpenID Connect Discovery document at
+    /.well-known/openid-configuration with issuer, jwks_uri, userinfo_endpoint,
+    and RS256 id_token signing.
+- id: oauth2-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported = [S256] in authorization server metadata (RFC 7636).
+- id: oauth2-device-flow
+  conforms: true
+  evidence: device_authorization_endpoint present; device_code grant advertised (RFC 8628).
+- id: oauth2-dynamic-client-registration
+  conforms: true
+  evidence: registration_endpoint present at /oauth2/register (RFC 7591); client_id_metadata_document_supported = true.
+- id: oauth2-introspection
+  conforms: true
+  evidence: introspection_endpoint present at /oauth2/introspection (RFC 7662).
+- id: saml
+  conforms: true
+  evidence: Enterprise plans document SSO / SAML federation with major identity providers.
+- id: rfc9457
+  conforms: false
+  evidence: No public OpenAPI or documented problem+json error contract (platform API is behind authenticated dashboard access).

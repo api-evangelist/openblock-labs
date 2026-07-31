@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.openblocklabs.com/ (OB-1 product surface)
+provider: OpenBlock Labs (OB-1)
+name: OB-1 CLI
+summary: >-
+  OB-1 ships a first-party native command-line coding agent that runs the full
+  dev lifecycle (PM to PR) from the terminal. It authenticates against the OB-1
+  OAuth device flow, integrates with VS Code / JetBrains IDEs, and consumes MCP
+  servers for custom tool integration. Exact subcommand surface is documented in
+  the authenticated dashboard manual and is not published on the public site.
+install:
+- method: shell
+  command: curl -fsSL https://dashboard.openblocklabs.com/install | bash
+capabilities:
+- Terminal / native CLI agent (interactive coding sessions)
+- VS Code and JetBrains IDE extension integration
+- Built-in browser agent with Chrome profile support
+- MCP-compatible tool integration
+- 300+ model access via OpenRouter, with Bring-Your-Own-Keys (BYOK)
+- GitHub, Linear, Graphite, and Slack workflow integrations
+auth:
+  method: oauth2-device-code
+  authorization_server: https://auth.openblocklabs.com
+docs: https://dashboard.openblocklabs.com/manual
+notes: >-
+  The install endpoint and manual sit on dashboard.openblocklabs.com behind
+  WorkOS AuthKit; command reference not scraped (auth-gated). No public package
+  registry entry (npm/PyPI/Homebrew) was found for the binary.

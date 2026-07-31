@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://auth.openblocklabs.com/.well-known/oauth-authorization-server
+docs: https://auth.openblocklabs.com/.well-known/oauth-authorization-server
+provider: OpenBlock Labs (OB-1)
+authorization_server: https://auth.openblocklabs.com
+notes: >-
+  Scopes advertised by the OB-1 OAuth 2.0 / OpenID Connect authorization server
+  (WorkOS AuthKit). scopes_supported harvested verbatim from the published
+  oauth-authorization-server metadata document. These are standard OIDC scopes;
+  the provider does not publish a fine-grained resource-permission scope
+  reference (the platform API sits behind authenticated dashboard access).
+scopes:
+- name: openid
+  description: OpenID Connect authentication; returns an ID token for the signed-in user.
+- name: profile
+  description: Access to the end user's basic profile claims.
+- name: email
+  description: Access to the end user's email address claim.
+- name: offline_access
+  description: Issue a refresh token so the client can obtain new access tokens without re-prompting.
