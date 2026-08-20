@@ -39,6 +39,15 @@ modified: '2026-07-20'
 tags:
 - Company
 - Data
+- Coding Agents
+- AI Agents
+- Developer Tools
+- Automation
+- Authentication
+- MCP
+tags_raw:
+- Company
+- Data
 - Coding Agent
 - AI Agents
 - Developer Tools
@@ -54,6 +63,10 @@ apis:
   humanURL: https://dashboard.openblocklabs.com/manual
   baseURL: https://auth.openblocklabs.com
   tags:
+  - Authentication
+  - OpenID Connect
+  - Coding Agents
+  tags_raw:
   - OAuth
   - OpenID Connect
   - Coding Agent
