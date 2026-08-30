@@ -50,7 +50,7 @@ modified: '2026-07-20'
 tags:
 - Company
 - Data
-- Coding Agents
+- Coding Agent
 - AI Agents
 - Developer Tools
 - Automation
@@ -76,7 +76,7 @@ apis:
   tags:
   - Authentication
   - OpenID Connect
-  - Coding Agents
+  - Coding Agent
   tags_raw:
   - OAuth
   - OpenID Connect
