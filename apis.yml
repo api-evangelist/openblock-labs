@@ -24,19 +24,15 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openblock-labs.png
 name: OpenBlock Labs
-description: >-
-  OpenBlock Labs builds OB-1, a self-improving autonomous coding agent that
-  automates the software development lifecycle from PM to PR. OB-1 runs as a
-  native terminal CLI and inside VS Code and JetBrains IDEs, consumes MCP
-  (Model Context Protocol) servers for custom tool integration, and provides a
-  built-in browser agent. It routes across 300+ models via OpenRouter with
-  bring-your-own-keys, bills usage-based at 1:1 model-token pass-through, and
-  integrates with GitHub, Linear, Graphite, and Slack. Access is authenticated
-  through a standards-compliant OAuth 2.0 / OpenID Connect authorization server
-  (auth.openblocklabs.com, WorkOS AuthKit), with SSO/SAML, self-hosting, and
-  audit logging available on enterprise plans. Originally surfaced as a
-  portfolio company of Electric Capital and enriched by the API Evangelist
-  pipeline from its public product surface and published auth metadata.
+description: OpenBlock Labs builds OB-1, a self-improving autonomous coding agent that automates the software
+  development lifecycle from PM to PR. OB-1 runs as a native terminal CLI and inside VS Code and JetBrains
+  IDEs, consumes MCP (Model Context Protocol) servers for custom tool integration, and provides a built-in
+  browser agent. It routes across 300+ models via OpenRouter with bring-your-own-keys, bills usage-based
+  at 1:1 model-token pass-through, and integrates with GitHub, Linear, Graphite, and Slack. Access is
+  authenticated through a standards-compliant OAuth 2.0 / OpenID Connect authorization server (auth.openblocklabs.com,
+  WorkOS AuthKit), with SSO/SAML, self-hosting, and audit logging available on enterprise plans. Originally
+  surfaced as a portfolio company of Electric Capital and enriched by the API Evangelist pipeline from
+  its public product surface and published auth metadata.
 url: https://raw.githubusercontent.com/api-evangelist/openblock-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -46,7 +42,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-09-16'
 tags:
 - Company
 - Data
@@ -56,6 +52,7 @@ tags:
 - Automation
 - Authentication
 - MCP
+- Identity Federation
 tags_raw:
 - Company
 - Data
@@ -65,12 +62,12 @@ tags_raw:
 - Automation
 - OAuth
 - MCP
+- Identity Federation
 apis:
 - name: OB-1 Platform
-  description: >-
-    The OB-1 coding-agent platform. The only publicly reachable API surface is
-    the OAuth 2.0 / OpenID Connect authorization server; the platform data API
-    and manual sit behind authenticated dashboard access.
+  description: The OB-1 coding-agent platform. The only publicly reachable API surface is the OAuth 2.0
+    / OpenID Connect authorization server; the platform data API and manual sit behind authenticated dashboard
+    access.
   humanURL: https://dashboard.openblocklabs.com/manual
   baseURL: https://auth.openblocklabs.com
   tags:
