@@ -64,6 +64,105 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-OpenBlock Labs is a company surfaced as a portfolio company of electric-capital and added to the API Evangelist network as a stub for enrichment. Sector: data. This profile is a lead awaiting the enrichment pipeline.
+OpenBlock Labs builds OB-1, a self-improving autonomous coding agent that automates the software development lifecycle from PM to PR. OB-1 runs as a native terminal CLI and inside VS Code and JetBrains IDEs, consumes MCP (Model Context Protocol) servers for custom tool integration, and provides a built-in browser agent. It routes across 300+ models via OpenRouter with bring-your-own-keys, bills usage-based at 1:1 model-token pass-through, and integrates with GitHub, Linear, Graphite, and Slack. Access is authenticated through a standards-compliant OAuth 2.0 / OpenID Connect authorization server (auth.openblocklabs.com, WorkOS AuthKit), with SSO/SAML, self-hosting, and audit logging available on enterprise plans. Originally surfaced as a portfolio company of Electric Capital and enriched by the API Evangelist pipeline from its public product surface and published auth metadata.
 
-Backed by: electric-capital — https://www.openblocklabs.com/
+**Areas:** Company · Data · Coding Agents · AI Agents · Developer Tools · Automation · Authentication · MCP · Identity Federation
+
+## OpenBlock Labs on APIs.io
+
+Everything profiled for OpenBlock Labs is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/openblock-labs/](https://apis.io/providers/openblock-labs/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [OB-1 Platform](https://apis.io/apis/openblock-labs/ob-1-platform/) — The OB-1 coding-agent platform. The only publicly reachable API surface is the OAuth 2.0 / OpenID Connect authorization server; the platform data API and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Moved to /providers/openblock-labs/](https://apis.io/servers/openblock-labs/openblock-labs/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Openblock Labs Authentication](https://apis.io/security/openblock-labs/openblock-labs-authentication/)
+- [Openblock Labs Domain Security](https://apis.io/security/openblock-labs/openblock-labs-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Openblock Labs Scopes](https://apis.io/scopes/openblock-labs/openblock-labs-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.openblocklabs.com/)
+- [Documentation](https://dashboard.openblocklabs.com/manual)
+- [Pricing](https://openblocklabs.com/pricing)
+- [Sign up](https://auth.openblocklabs.com/)
+- [Support](https://join.slack.com/t/ob1-co/shared_invite/zt-3rjae490g-uiEO5z_FnWJ5GAc~hkfkyA)
+- [Terms of service](https://dashboard.openblocklabs.com/terms)
+- [Privacy policy](https://dashboard.openblocklabs.com/privacy)
+- [GitHub](https://github.com/openblocklabs)
+
+## API Evangelist rating
+
+**Kin Score 23.7** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 23.7 |
+
+**Agent readiness 11.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 30.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/openblock-labs/](https://apis.io/providers/openblock-labs/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for OpenBlock Labs: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/openblock-labs/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
